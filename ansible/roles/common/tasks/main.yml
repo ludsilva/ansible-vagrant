@@ -1,0 +1,21 @@
+---
+- name: Update cache
+  apt:
+    update_cache: true
+
+- name: Instalando pacotes essenciais
+  apt:
+    name: "{{ packages }}"
+    state: present
+
+- name: Mudando nome da máquina
+  ansible.builtin.hostname:
+    name: "{{ hostname }}"
+
+- name: Criando novo usuário
+  user:
+    name: ludsilva
+    shell: /bin/bash
+    group: vagrant
+    createhome: yes
+    password: "{{ password }}"

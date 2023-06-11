@@ -1,0 +1,18 @@
+---
+packages:
+  - vim
+  - curl
+  - telnet
+  - unzip
+  - wget
+  - net-tools
+  - htop
+  - nmap
+
+hostname: ubuntu
+
+# Criado com:
+# python -c 'import crypt; print crypt.crypt("Alterar2023", "$1$SomeSalt$")'
+
+password: $1$SomeSalt$rPaj/yixtSQ33CXG3WOjm/ 
+# Senha de acesso para logar no usuário: Alterar2023 
